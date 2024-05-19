@@ -234,7 +234,7 @@ def initLocal():
         
     #部署 env 环境变量
     get_ipython().system(f'apt -y update -qq')
-    get_ipython().system(f'wget https://huggingface.co/wageguagua/sd_config/blob/main/libtcmalloc_minimal.so.4 -O /content/libtcmalloc_minimal.so.4')
+    get_ipython().system(f'wget https://huggingface.co/wageguagua/sd_config/resolve/main/libtcmalloc_minimal.so.4 -O /content/libtcmalloc_minimal.so.4')
     get_ipython().run_line_magic('env', 'LD_PRELOAD=/content/libtcmalloc_minimal.so.4')
 
     #设置 python 环境
